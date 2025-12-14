@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Reader - First 10 Lines</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 50px auto; 
+            padding: 20px; 
+            background: #f9f9f9;
+        }
+        .upload-area { 
+            border: 2px dashed #007bff; 
+            padding: 40px; 
+            text-align: center; 
+            margin: 20px 0; 
+            background: white;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        .upload-area:hover { border-color: #0056b3; }
+        .upload-area.dragover { 
+            border-color: #28a745; 
+            background: #f8fff9; 
+            transform: scale(1.02);
+        }
+        input[type="file"] { 
+            margin: 20px 0; 
+            font-size: 16px;
+        }
+        #output { 
+            background: #f8f9fa; 
+            padding: 20px; 
+            border-radius: 8px; 
+            margin-top: 20px; 
+            min-height: 100px;
+            border: 1px solid #dee2e6;
+        }
+        .error { 
+            color: #dc3545; 
+            background: #f8d7da; 
+            border: 1px solid #f5c6cb; 
+            padding: 15px; 
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .success { 
+            color: #155724; 
+            background: #d4edda; 
+            border: 1px solid #c3e6cb; 
+            padding: 15px; 
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        pre { 
+            background: white; 
+            padding: 15px; 
+            border-radius: 5px; 
+            font-family: 'Courier New', monospace;
+            border-left: 4px solid #007bff;
+            margin: 10px 0;
+        }
+        h1 { color: #007bff; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>📄 File Reader - First 10 Lines</h1>
+    <div class="upload-area" id="uploadArea">
+        <p>🖱️ Drag & drop a text file here</p>
+        <p>or <strong>Click to browse</strong></p>
+        <input type="file" id="fileInput" accept=".txt,.log,.csv,.md,.js" />
+    </div>
+    <div id="output">Ready to upload a file...</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
